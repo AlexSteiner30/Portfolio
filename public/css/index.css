@@ -1,46 +1,58 @@
-/* Introduction */
-.introduction{
+.introduction {
     width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
     height: auto;
-
     position: absolute;
-
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
-}
-
-
-.introduction img{
-    float: left;
-
-    width: 25%;
-    height: 25%;
-
-    border-radius: 10%;
-
-    margin-right: 50px;
-}
-
-.introduction h1{
+    display: flex;
+    align-items: center;
+    text-align: left;
     color: white;
 }
 
+.introduction img {
+    width: 25%;
+    height: auto;
+    border-radius: 10%;
+    margin-right: 50px;
+    flex-shrink: 0;
+}
 
-@media only screen and (max-width: 1020px) {
-    .introduction{
-        display: block;
-        text-align: left;
+.introduction h1 {
+    margin: 0;
+    font-size: 2em;
+    flex-grow: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .introduction {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        top: 40%;
+        transform: translate(-50%, -40%);
     }
 
-    .introduction .text{
-        float: none;
+    .introduction img {
+        width: 50%;
+        margin: 0 auto 20px;
+    }
+    
+    .introduction h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .introduction img {
+        width: 70%;
     }
 
-    .introduction img{
-        float: right;
-
-        margin-left: 0px;
+    .introduction h1 {
+        font-size: 1.2em;
     }
 }
